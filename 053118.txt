@@ -1,0 +1,97 @@
+Github desktop을 사용
+GUI 환경이라 편하다.
+
+다운로드 사이트 : https://desktop.github.com/
+
+다운로드 받고, 자신의 깃허브 아이디로 로그인 한 후, 로컬 폴더에 레포지토리를 생성하여 해당 레포지토리에 파일을
+
+올리거나 수정하면 깃허브 desktop이 이를 인식한다. 변경이 감지되면 이 변경을 온라인에 올릴 것인지 
+
+깃허브 소프트웨어에서 선택을 할 수 있고 이를 커밋이라고 한다. 커밋이 완료 되면 푸쉬를 할 수 있는데
+
+실질적으로 푸쉬라는 것이 온라인에 올린다는 의미이다. 커밋은 파일 내용 변경 내역을 볼 수 있을 뿐만 아니라
+
+다수의 사람들과 공동 작업을 했을 때, 실수로 push하여 프로젝트가 망가지는 것을 막는 일종의 방어막이라고 볼 수 있을 것 같다.
+
+오늘의 삽질 - Python 
+
+Coursera - Intro to interactive programming in Python part 1 & 2를 훑어보았다.
+
+Udacity를 다하니 할 게 없음... 
+
+Youtuber인 Clever Programmer 라는 사람이 두달 프로그래밍을 배우고 외주를 받아서 돈을 벌었다는데
+
+https://www.youtube.com/channel/UCqrILQNl5Ed9Dz6CGMyvMTQ
+
+이 사람이 저번에 자신이 어떻게 공부했는지 올린 비디오가 있었다.
+
+그 비디오에서 자신은 두달 동안 하루에 12시간씩 프로그래밍 공부만 했다고 한다.
+
+커리큘럼은 아래와 같다
+
+1. Udacity - Intro to Computer science (built a search engine)
+2. Coursera - Intro to interactive programming in Python Part 1 & 2 (building games - but it's in their online platform)
+3. Coursera - Principles of Computing part 1 & 2 (theory, graph analysis, statistics, probability and how it all relates to programming)
+4. Codecademy - some of it
+5. Udemy - he did 5 to 10 courses
+
+1번은 완료했으니 오늘은 2번과 3번의 커리큘럼을 확인해보았다.
+앞으로 가능하다면 3번까지는 따라가보고, 이후 과정은 Django를 넣던지 해서 개인 스터디를 해야 될 것 같다.
+
+직접 로그인하고 1시간 동안 해당 강좌들을 들어본 결과 앞에 있는 부분은 전에 했던 Udacity가 좀 더 난이도가 있었지
+
+않았나 싶다. 물론 이 생각이 틀릴 가능성이 꽤 크다. 단순히 한시간 동안 어떤식으로 수업의 커리큘럼만 본 것이기 
+
+때문이다. 따라서 기존에 배웠던 자료형이나, 함수 선언과 같은 부분은 전부 빼고, 
+
+An Introduction to interactive programming in Python Part 2에서 Week6의 Object-oriented Programming부터 공부할 
+
+생각이다. C#에서 조금 배웠지만 이해가 잘 되지 않았었기 때문에 파이썬으로 다시 공부하면서 다듬어야 겠다는 생각이 들었다.
+
+또한 저번에 장고 삽질을 하면서 장고가 아주 객체지향적이었기 때문에 향후 장고를 공부하기 위해서라도
+
+공부의 필요성이 느껴졌다. 오늘은 일단 C#에서 배운 것이 있기 때문에 아주 기초적인 것만 한 것같다.
+
+class Character:
+    def __init__(self, name, initial_health):
+        self.name = name
+        self.health = initial_health
+        self.inventory = []
+        
+    def __str__(self):
+        s  = "Name: " + self.name
+        s += " Health: " + str(self.health)
+        s += " Inventory: " + str(self.inventory)
+        return s
+    
+    def grab(self, item):
+        self.inventory.append(item)
+        
+    def get_health(self):
+        return self.health
+    
+def example():
+    me = Character("Bob", 20)
+    print str(me)
+    me.grab("pencil")
+    me.grab("paper")
+    print str(me)
+    print "Health:", me.get_health()
+    
+example()
+
+클래스 Character라는 것에는  초기화 함수, str 함수가 존재하고 그 이외 함수들(grab, get_health)이 존재한다.
+
+초기화 함수는 말 그대로 클래스를 초기화 하는 것이다. 초기화 함수의 파라미터를 보면 self가 있는데,
+
+이는 초기화함수를 불러오는 인스턴스가 self가 되어 인자값을 입력해 줄 필요가 없다고 한다. 예를 들어 example
+
+프로시져에서 me라는 것을 Character 클래스 인스턴스로 지정했기 때문에, me를 self 자리에 넣어 해당 클래스를
+
+초기화 시키는 것이다. 즉, 자기 자신을 초기화 시키는 것이다. 
+
+str은 정확히 어떤 글자의 약자인지는 모르겠지만, 현재 클래스의 상황을 보여주는 프로시져 같다.
+
+init 프로시져와 마찬가지로 언더바 두개에 싸여있기 때문에, 클래스 선언시 꼭 필요한 프로시져가 아닐까 싶다.
+
+
