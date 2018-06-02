@@ -1,0 +1,4 @@
+
+Question1) When is the proper time to use tuple and set?
+Question2) What is IIP?
+Question3) What does pass statement mean?

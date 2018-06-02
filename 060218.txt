@@ -1,0 +1,31 @@
+OOP Programming Tips
+1. 모든 메소드에는 self가 첫번째 인자 이다.
+2. 메소드를 사용할 때는 객체.메소드 형식으로 호출한다.
+3. __init__ 메소드는 항상 존재해야한다.
+4. 클래스의 변수는 init 메소드에서 "self.변수명"으로 선언하여 사용한다.
+5. 클래스 명은 항상 첫번째 글자를 대문자로 쓴다.
+6. 메소드 이름의 첫번째 글자는 소문자로 쓴다.
+
+========================================================================
+이번 코스에서 게임 가르쳐준다길래 안했다. 게임 만들기 노잼인듯..
+고로 바로 다음 꺼로 넘어갔다. ㅎㅎ
+------------------------------------------------------------------------
+Principles of Computing (Part 1)
+by Rice University
+
+Week1
+파이썬 3에서는 print 할 때 ()가 사용된다.
+파이썬 3에서는 11/4 를 2로 출력하는 것이 아니라 2.75로 출력한다.
+
+primitive data types- int, float, str, bool
+built-in composite data types - lists, tuples, dictionaries, sets
+User-defined data types - objects created via a class definition.
+
+this is gonna be challenging...
+
+Question1) When is the proper time to use tuple and set?
+Question2) What is IIP?
+Question3) What does pass statement mean?
+
+need to read for tommorrow.
+https://www.coursera.org/learn/principles-of-computing-1/supplement/HwJPF/practice-mini-project-solitaire-mancala
