@@ -1,0 +1,87 @@
+Question1) When is the proper time to use tuple and set?
+
+tuple 
+	불변적(immutable, 변경 불가)이다. 
+	튜플은 들어 있는 요소의 수를 사전에 정확히 알고 있을 경우에 사용한다. (수정할 수 없기 때문에)
+	Named tuple이란?
+
+		>>> from collections import namedtuple
+		>>> Station = namedtuple("Station", "id, city, state, lat, long")
+		>>> denver = Station(44, "Denver", "CO", 40, 105)
+		>>> denver
+		Station(id=44, city='Denver', state='CO', lat=40, long=105)
+		>>> denver.city
+		'Denver'
+		>>> denver[1]
+		'Denver'
+	튜플은 리스트와 비슷하지만, immutable이며, 리스트보다 좀 더 적은 양의 리소스를 필요로 한다.
+	따라서 좀 더 효율적인 프로그래밍을 할때는 튜플을 사용하는 것이 좋을 것이다.
+
+Set
+	중복을 허용하지 않는다.
+	순서가 없다.
+	차집합, 부분집합, 교집합등 다양한 연산이 가능하다.
+
+-> 중복을 제거할 때 쓰이기도 한다.
+
+Question2) What is IIP?
+
+Question3) What does pass statement mean?
+pass 는 단순히 아무것도 하지 않게 하지만 
+continue는 바로 다음 순번의 loop를 돌도록 하게 합니다.
+
+global 
+	함수안에서 전역변수를 선언하고 싶을 때, 명시적으로 전역변수라고 해야 할 때 사용
+
+만칼라 게임 규칙
+	규칙 1 - 마지막 구슬이 자신의 만칼라통으로 들어간 경우 한 번 더 구슬을 옮길 수 있다.
+	규칙 2 - 마지막 구슬이 자신의 비어있는 보관통에 들어갔을 경우 반대편에 위치한 상대방의
+		구슬과 자신의 마지막 구슬을 만칼라통으로 옮긴다.
+	규칙 3 - 자신의 만칼라통에는 구슬을 넣을 수 있지만, 상대방의 만칼라통에는 구슬을 넣을 수 없다.
+
+코딩 스타일을 맞추는 이유
+	1. 협업이 편하다.
+	2. 도움 받기 편하다.
+	3. 에러를 찾아내기 편하다.
+
+코딩 스타일
+	1. docstring :  docstring은 모듈에 대해서도, 클래스에 대해서도, 메소드나 프로시져에 대해서도 작성가능하다.
+		       각 docstring은 해당 키워드 바로 밑 줄부터 """asdfasdf""" 이런식으로 작성된다.
+			ex) def repeat_string(string, num) :
+				""" 
+				    This is a docstring for a function: 
+				    인자 선택의 이유나, 프로시져의 기능을 설명한다.
+	2. 전역 변수는 절대 사용금물 단, 전역 상수는 사용가능하다.	
+	3. 모든 들여쓰기 수준은 스페이스바 4칸이다. 들여쓰기에 탭을 사용하지 않아야 한다. 
+	   (단,  codeskulptor는 모든 탭 들여쓰기를 자동으로 4칸 스페이스바로 변환한다.)
+	4. 모든 변수, 함수, 클래스 및 메소드 이름은 3자 이상이어야 한다.
+		변수 이름은 항상 소문자로 시작해야 한다. (단, 상수를 나타내는 변수는 모두 대문자 사용)
+		함수 및 메소더의 이름은 항상 소문자로 시작해야 한다.
+		클래스 이름은 항상 대문자로 시작해야 한다.
+		
+		또한 변수, 함수 및 메서드의 이름엔 대문자가 존재해선 안된다. 대문자 대신 밑줄문자로 가독성을 높인다.
+			some_variable_name
+		클래스의 이름에는 밑줄문자가 없어야 하며, 대신 대문자를 사용하여 표현한다.
+			SomeClassName
+		상수는 항상대문자이며, 띄어쓰기가 필요할때 밑줄문자를 사용한다.
+			THIS_IS_A_CONSTANT
+	5. 클래스 및 인스턴스의  필드
+		파이썬 프로그램에서 클래스의 모든 필드는 데이터 보호를 위해서 항상 비공개이어야 한다.
+		이를 위해서, 밑줄 문자를 사용한다(?). 일반적으로 필드에 대한 제어를 할 때, get_field 이란 메소드를 
+		사용하는데, 여기서 field는 필드의 이름이다. 
+	6. 키워드 중복 사용 금지
+	7. 너무 많은 인자나 지역변수를 사용하지 말 것! // 사용되지 않는 변수를 만들지 말자!
+		
+import 사용법
+	import 한 파이썬 파일의 키워드 + 점 ex) math.pi
+dir 프로시져
+	ex) print dir(math)
+	>> math 파일에서 사용할 수 있는 상수나, 프로시져들을 출력한다.
+import 한 모듈의 이름이 너무 길때
+	import examples_module as example 이렇게 쓰면, 모듈의 이름을 as 이하 (example) 로 사용할 수 있다.	
+	(단, 모듈의 이름을 최대한 바꾸지 않도록 하자, 꼭 바꿔야 할 땐 해당 모듈의 기능을 한눈에 보기 쉽도록 네이밍을 하자.)
+
+codeskulptor에서 모듈을 import 할 때, 
+	www.codeskulpor.org/#user39adsfalsdkfj.py에서 user39adsfalsdkfj 이부분을 import 하면 된다.
+
+--> OOP 개념에 대한 정확한 이해를 위하여, 한국어로 된 동영상 강의를 찾아봐야 될 것 같다.
