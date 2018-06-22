@@ -1,0 +1,49 @@
+오늘 작성한 코드 :  2048 게임 merge 함수 만들기 과제
+
+"""
+Merge function for 2048 game.
+"""
+
+def merge(line):
+    """
+    Function that merges a single row or column in 2048.
+    """
+    
+    tmp = []
+    res = []
+    prev = 0
+    
+    for value1 in line:
+        tmp.append(value1)
+    
+    for value2 in tmp:
+        
+        if value2 == 0:
+            continue
+            
+        if prev != 0 :
+            
+            if prev == value2:
+                prev = 0
+                res.append(value2 * 2)
+  
+            else:
+                res.append(prev)
+                prev = value2
+            
+        else:
+            prev = value2
+            
+    res.append(prev) # appending last element
+    
+    if len(res) != len(tmp):
+        count = abs(len(res) - len(tmp))
+        
+        while(count != 0):
+            res.append(0)
+            count -= 1
+        
+    return res
+
+print(merge([2,0,2,4]))
+
