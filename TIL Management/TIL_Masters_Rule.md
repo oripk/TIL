@@ -48,6 +48,6 @@
 - Place-Master : TIL Masters 모임 장소 섭외
 - Role-Master : TIL Masters 모임 역할을 정하고 매주 미리 발표
 				( 단, 쫑긋이는 매 주 가장 벌금이 적은 사람으로 고정한다.)
-- Accounting-Master	: TIL 회계 업무로 매주 TIL Master 끝난 이후 벌금 누적 + 한번씩 수금 및 영수증 관리 역할
-- Vice-Accounting-Master : 매주 목요일 각자의 최종 벌금 알림 / TIL Master 끝난 이후, 쫑긋이의 결과 기록
+- Accounting-Master	: TIL 회계 업무로 매주 TIL Master 끝난 이후 벌금 누적 + 한번씩 수금 및 영수증 관리 역할 -> 문서 작업은 Github를 이용한다.
+- Vice-Accounting-Master : 매주 목요일 각자의 최종 벌금 알림 / TIL Master 끝난 이후, 쫑긋이의 결과 기록 -> 문서 작업은 Github를 이용한다.
 - Manager : 매주 모임 총 관리(문서 정리 등) + 신입회원 교육 + 잡일
